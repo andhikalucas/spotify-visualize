@@ -1,0 +1,14 @@
+# Personal data and anything built from it
+private/
+Spotify Account Data/
+spotify-history.html
+*.zip
+
+# OS and tooling
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+
+# Subagent-driven development scratch
+.superpowers/

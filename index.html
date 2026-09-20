@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotify Stats Visualizer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231ed760'/%3E%3C/svg%3E">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="landing" id="landing" hidden></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="avatar" id="avatar">L</div>
+      <div class="brand-text">
+        <div class="brand-name" id="brandName">—</div>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Views"></nav>
+
+    <p class="side-credit">Made by @andhikalucas</p>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true">
+          <path fill="currentColor" d="M7 1a6 6 0 1 0 3.66 10.75l3.29 3.3 1.06-1.07-3.29-3.29A6 6 0 0 0 7 1Zm0 1.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/>
+        </svg>
+        <input id="globalSearch" class="search-input" type="search" autocomplete="off"
+               placeholder="Search tracks and artists&hellip;" aria-label="Search tracks and artists">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </div>
+    </header>
+
+    <main id="views">
+      <section class="view" id="view-timeline" data-view="timeline" hidden></section>
+      <section class="view" id="view-charts"   data-view="charts"   hidden></section>
+      <section class="view" id="view-history"  data-view="history"  hidden></section>
+      <section class="view" id="view-library"  data-view="library"  hidden></section>
+      <section class="view" id="view-extras"   data-view="extras"   hidden></section>
+      <section class="view" id="view-settings" data-view="settings" hidden></section>
+    </main>
+  </div>
+
+  <nav class="bottombar" id="bottombar" aria-label="Views"></nav>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
